@@ -338,7 +338,7 @@ Clicking **Approve** issues an authenticated webhook callback to `/api/decision-
 
 * **Vishnu Vardan R G** — Full-Stack Cockpit Engine, Telegram Gatekeeper & Adapter Layer
 * **Sriram S** — Systems Architecture, Mathematical Modeling & Ingest Pipeline
-* **Yadhu Surya R** — Machine Learning Forecasting & Assurance Algorithms
+* **Sanjay G** — Machine Learning Forecasting & Assurance Algorithms
 
 
 ---
