@@ -21,6 +21,7 @@ export default function LandingPage() {
 
   // GSAP Animation Refs
   const heroGlowRef = useRef(null);
+  const heroLogoBgRef = useRef(null);
   const heroBadgeRef = useRef(null);
   const heroHeadlineRef = useRef(null);
   const heroParagraphRef = useRef(null);
@@ -76,6 +77,16 @@ export default function LandingPage() {
       scale: 1.25,
       opacity: 0.9,
       duration: 3.5,
+      repeat: -1,
+      yoyo: true,
+      ease: 'sine.inOut'
+    });
+
+    // Subtle breathing animation for ambient background watermark logo
+    gsap.to(heroLogoBgRef.current, {
+      scale: 1.05,
+      opacity: 0.10,
+      duration: 4.5,
       repeat: -1,
       yoyo: true,
       ease: 'sine.inOut'
@@ -277,6 +288,29 @@ export default function LandingPage() {
           zIndex: 1,
           pointerEvents: 'none'
         }} />
+
+        {/* Ambient Watermark Logo (Landing Page / Home Screen Background Only) */}
+        <div 
+          ref={heroLogoBgRef}
+          aria-hidden="true"
+          style={{
+            position: 'absolute',
+            top: '46%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            width: 'min(680px, 86vw)',
+            height: 'min(680px, 86vw)',
+            backgroundImage: 'url(/Final_Logo-removebg-preview.png)',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'contain',
+            opacity: 0.07,
+            filter: 'drop-shadow(0 0 60px rgba(185, 255, 102, 0.14))',
+            zIndex: 1,
+            pointerEvents: 'none',
+            userSelect: 'none'
+          }} 
+        />
 
         <div style={{ position: 'relative', zIndex: 2, maxWidth: '900px', width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
           
