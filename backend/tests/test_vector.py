@@ -43,16 +43,16 @@ def test_mock_kubernetes_adapter():
     adapter = MockKubernetesAdapter()
     workloads = adapter.get_workloads()
     
-    # Assert initial baseline configuration is loaded
-    assert len(workloads) == 4
-    payment_svc = next(w for w in workloads if w["name"] == "payment-service")
-    assert payment_svc["replicas"] == 3
+    # Assert initial baseline configuration is loaded (4 shop + 4 erp workloads)
+    assert len(workloads) == 8
+    frontend_svc = next(w for w in workloads if w["name"] == "shop-frontend")
+    assert frontend_svc["replicas"] == 3
     
     # Assert scale logic works
-    scaled = adapter.scale_deployment("payment-service", 5)
+    scaled = adapter.scale_deployment("shop-frontend", 5)
     assert scaled is True
-    assert adapter.workloads["payment-service"]["replicas"] == 5
-    assert len(adapter.workloads["payment-service"]["pods"]) == 5
+    assert adapter.workloads["shop-frontend"]["replicas"] == 5
+    assert len(adapter.workloads["shop-frontend"]["pods"]) == 5
 
 def test_assurance_scoring_logic(db_session):
     # Initialize basic policies
