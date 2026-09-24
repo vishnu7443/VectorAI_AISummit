@@ -336,9 +336,10 @@ Clicking **Approve** issues an authenticated webhook callback to `/api/decision-
 
 **Team Codex** — AI Summit 2026
 
+* **Vishnu Vardan R G** — Full-Stack Cockpit Engine, Telegram Gatekeeper & Adapter Layer
 * **Sriram S** — Systems Architecture, Mathematical Modeling & Ingest Pipeline
 * **Yadhu Surya R** — Machine Learning Forecasting & Assurance Algorithms
-* **Vishnu Vardan R G** — Full-Stack Cockpit Engine, Telegram Gatekeeper & Adapter Layer
+
 
 ---
 
@@ -348,7 +349,7 @@ If you utilize Vector's algorithms or architecture in your academic research or 
 
 ```bibtex
 @software{vector_ai_2026,
-  author    = {Sriram, S. and Surya R, Yadhu and Vardan R G, Vishnu},
+  author    = {Vishnu Vardan R G , Sriram S. and , Yadhu Surya R , Sanjay G},
   title     = {Vector: Autonomous AI Decision Intelligence and Infrastructure Assurance Platform},
   year      = {2026},
   publisher = {GitHub},
